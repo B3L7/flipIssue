@@ -1,0 +1,22 @@
+{
+  "name": "flipissue",
+  "version": "1.0.0",
+  "description": "Made to illustrate an issue with Phaser 3's flipX property.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/B3L7/flipIssue.git"
+  },
+  "author": "B3L7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/B3L7/flipIssue/issues"
+  },
+  "homepage": "https://github.com/B3L7/flipIssue#readme",
+  "dependencies": {
+    "phaser": "^3.10.1"
+  }
+}
