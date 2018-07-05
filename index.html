@@ -20,8 +20,7 @@ body {
 				height: 600,
 				scene: {
 					preload: preload,
-					create: create,
-					update: update
+					create: create
 				}
 			};
 
@@ -53,10 +52,6 @@ function create ()
 	this.time.addEvent({ delay: 5000, callback: onEvent, callbackScope: this, loop: true });
 }
 
-function update ()
-{
-}
-
 function onEvent()
 {
 	if (example1.scaleX === 1) {
@@ -65,11 +60,16 @@ function onEvent()
 		example1.setScale(1, 1);
 	}
 
+	text1.setText(`Scale = ${example1.scaleX}`);
+
+
 	if (example2.flipX === false) {
 		example2.setFlipX(true);
 	} else {
 		example2.setFlipX(false);
 	}
+
+	text2.setText(`flipX: ${example2.flipX}`);
 }
 
 		</script>
