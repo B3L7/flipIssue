@@ -27,7 +27,9 @@ body {
 
 var game = new Phaser.Game(config);
 var example1;
+var text1;
 var example2;
+var text2
 
 function preload ()
 {
@@ -41,7 +43,10 @@ function create ()
 	this.anims.create({ key: 'animation', frames: this.anims.generateFrameNames('atlas', { prefix: 'example', end: 5}), repeat: -1, frameRate: 12 });
 
 	example1 = this.add.sprite(this.cameras.main.width * .25, this.cameras.main.height * .5, 'atlas', 'example0').play('animation');
+	text1 = this.add.text(this.cameras.main.width * .25, this.cameras.main.height * .5 - 36, 'Scale = 1', { fontFamily: 'Arial', fontSize: 32, color: '#ebdbb2' });
+
 	example2 = this.add.sprite(this.cameras.main.width * .75, this.cameras.main.height * .5, 'atlas', 'example0').play('animation');
+	text2 = this.add.text(this.cameras.main.width * .75, this.cameras.main.height * .5 - 36, 'flipX: false', { fontFamily: 'Arial', fontSize: 32, color: '#ebdbb2' });
 
 	this.time.addEvent({ delay: 5000, callback: onEvent, callbackScope: this, loop: true });
 }
