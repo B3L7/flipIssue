@@ -41,10 +41,26 @@ function create ()
 	example1 = this.add.sprite(this.cameras.main.width * .25, this.cameras.main.height * .5, 'atlas', 'example0').play('animation');
 	example2 = this.add.sprite(this.cameras.main.width * .75, this.cameras.main.height * .5, 'atlas', 'example0').play('animation');
 
+	this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
 }
 
 function update ()
 {
+}
+
+function onEvent()
+{
+	if (example1.scaleX === 1) {
+		example.setScale(-1, 1);
+	} else {
+		example.setScale(1, 1);
+	}
+
+	if (example2.flipX === false) {
+		example2.setFlipX(true);
+	} else {
+		example2.setFlipX(false);
+	}
 }
 
 		</script>
