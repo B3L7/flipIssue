@@ -36,7 +36,7 @@ function preload ()
 
 function create ()
 {
-	this.add.image(this.cameras.main.with /2, this.cameras.main.height /2, 'atlas', 'bg');
+	this.add.image(this.cameras.main.width /2, this.cameras.main.height /2, 'atlas', 'bg');
 
 	this.anims.create({ key: 'animation', frames: this.anims.generateFrameNames('atlas', { prefix: 'example', end: 5}), repeat: -1, frameRate: 12 });
 
