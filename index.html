@@ -38,7 +38,7 @@ function create ()
 {
 	this.anims.create({ key: 'animation', frames: this.anims.generateFrameNames('atlas', { prefix: 'example', end: 5}), repeat: -1 });
 
-	example1 = this.add.sprite(this.cameras.main.width * .25, this.cameras.main.height * .5, 'atlas' 'example0').play('animation');
+	example1 = this.add.sprite(this.cameras.main.width * .25, this.cameras.main.height * .5, 'atlas', 'example0').play('animation');
 }
 
 function update ()
